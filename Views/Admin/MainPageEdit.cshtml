@@ -1,0 +1,195 @@
+﻿@using WeddingProject.Entities
+@model HomePage
+@{
+    ViewData["Title"] = "MainPageEdit";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div id="wrapper">
+	<div class="main-content">
+		<div class="row small-spacing">
+			<div class="col-lg-6 col-xs-12">
+				<div class="box-content card white">
+					<h4 class="box-title">Anasayfa İçeriklerini Düzenle</h4>
+					<!-- /.box-title -->
+					<div class="card-content">
+						<form asp-action="MainPageEdit" asp-controller="Admin" method="post" enctype="multipart/form-data">
+							<input asp-for="Id" type="text" class="form-control" hidden>
+
+							<div class="form-group">
+								<label for="exampleInputEmail1">Anasayfa Slider Düzeni</label>
+								<br />
+								<label >Slider 1 Başlık</label>
+								<input asp-for="Slider1Title" type="text" class="form-control" id="exampleInputEmail1" >
+							</div>
+							<div class="form-group">
+								<label for="exampleInputFile">Slider 1 Resim</label>
+								<input type="file" name="slideri1" id="exampleInputFile">
+								<p class="help-block"></p>
+							</div>
+
+							<div class="form-group">
+								<br />
+								<label>Slider 2 Başlık</label>
+								<input asp-for="Slider2Title" type="text" class="form-control" id="exampleInputEmail1" >
+							</div>
+							<div class="form-group">
+								<label for="exampleInputFile">Slider 2 Resim</label>
+								<input type="file" name="slideri2" id="exampleInputFile">
+								<p class="help-block"></p>
+							</div>
+
+							<div class="form-group">
+								<br />
+								<label>Slider 3 Başlık</label>
+								<input type="text" asp-for="Slider3Title" class="form-control" id="exampleInputEmail1" >
+							</div>
+							<div class="form-group">
+								<label for="exampleInputFile">Slider 3 Resim</label>
+								<input type="file" name="slideri3" id="exampleInputFile">
+								<p class="help-block"></p>
+							</div>
+
+							<br />
+							<hr />
+							<div class="form-group">
+								<br />
+								<label>Anasayfa Hakkında Açıklama Başlığı</label>
+								<input asp-for="HomePageDescTitle" type="text" class="form-control" id="exampleInputEmail1" >
+							</div>
+							<div class="form-group">
+								<br />
+								<label>Anasayfa Hakkında Açıklama 1</label>
+								<input asp-for="HomePageDesc1" type="text" class="form-control" id="exampleInputEmail1" >
+							</div>
+
+							<div class="form-group">
+								<br />
+								<label>Anasayfa Hakkında Açıklama 2</label>
+								<input asp-for="HomePageDesc2" type="text" class="form-control" id="exampleInputEmail1">
+							</div>
+							<div class="form-group">
+								<label for="exampleInputFile">Anasayfa Hakkında Resim 1</label>
+								<input type="file" name="hpi1" id="exampleInputFile">
+								<p class="help-block"></p>
+							</div>
+							<div class="form-group">
+								<label for="exampleInputFile">Anasayfa Hakkında Resim 2</label>
+								<input type="file" name="hpi2" id="exampleInputFile">
+								<p class="help-block"></p>
+							</div>
+							<div class="form-group">
+								<label for="exampleInputFile">Anasayfa Hakkında Resim 3</label>
+								<input type="file" name="hpi3" id="exampleInputFile">
+								<p class="help-block"></p>
+							</div>
+							<div class="form-group">
+								<label for="exampleInputFile">Anasayfa Hakkında Resim 4</label>
+								<input type="file" name="hpi4" id="exampleInputFile">
+								<p class="help-block"></p>
+							</div>
+							<br />
+							<hr />
+							<div class="form-group">
+								<br />
+								<label>Anasayfa hikayemiz Başlığı</label>
+								<input asp-for="OurHistoryTitle" type="text" class="form-control" id="exampleInputEmail1" >
+							</div>
+							<div class="form-group">
+								<br />
+								<label>Anasayfa hikayemiz Açıklaması</label>
+								<input asp-for="OurHistoryDesc" type="text" class="form-control" id="exampleInputEmail1">
+							</div>
+							<div class="form-group">
+								<br />
+								<label>Anasayfa hikayemiz Açıklaması Stick 1</label>
+								<input asp-for="OurHistoryStick1" type="text" class="form-control" id="exampleInputEmail1">
+							</div>
+							<div class="form-group">
+								<br />
+								<label>Anasayfa hikayemiz Açıklaması Stick 2</label>
+								<input asp-for="OurHistoryStick2" type="text" class="form-control" id="exampleInputEmail1">
+							</div>
+							<div class="form-group">
+								<br />
+								<label>Anasayfa hikayemiz Açıklaması Stick 3</label>
+								<input asp-for="OurHistoryStick3" type="text" class="form-control" id="exampleInputEmail1">
+							</div>
+							<div class="form-group">
+								<br />
+								<label>Anasayfa hikayemiz Açıklaması Stick 4</label>
+								<input asp-for="OurHistoryStick4" type="text" class="form-control" id="exampleInputEmail1">
+							</div>
+							<div class="form-group">
+								<br />
+								<label>Anasayfa hikayemiz Açıklaması Stick 5</label>
+								<input asp-for="OurHistoryStick5" type="text" class="form-control" id="exampleInputEmail1">
+							</div>
+							<div class="form-group">
+								<br />
+								<label>Anasayfa hikayemiz Açıklaması Stick 6</label>
+								<input asp-for="OurHistoryStick6" type="text" class="form-control" id="exampleInputEmail1">
+							</div>
+
+							<br />
+							<hr />
+
+							<div class="form-group">
+								<br />
+								<label>Hizmet ismi 1</label>
+								<input asp-for="Service1Name" type="text" class="form-control" id="exampleInputEmail1" >
+							</div>
+							<div class="form-group">
+								<br />
+								<label>Hizmet Açıklaması 1</label>
+								<input asp-for="Service1Desc" type="text" class="form-control" id="exampleInputEmail1" >
+							</div>
+							<br />
+							<div class="form-group">
+								<br />
+								<label>Hizmet ismi 2</label>
+								<input asp-for="Service2Name" type="text" class="form-control" id="exampleInputEmail1" >
+							</div>
+							<div class="form-group">
+								<br />
+								<label>Hizmet Açıklaması 2</label>
+								<input asp-for="Service2Desc" type="text" class="form-control" id="exampleInputEmail1" >
+							</div>
+							<br />
+							<div class="form-group">
+								<br />
+								<label>Hizmet ismi 3</label>
+								<input asp-for="Service3Name" type="text" class="form-control" id="exampleInputEmail1" >
+							</div>
+							<div class="form-group">
+								<br />
+								<label>Hizmet Açıklaması 3</label>
+								<input asp-for="Service3Desc" type="text" class="form-control" id="exampleInputEmail1" >
+							</div>
+							<div class="form-group">
+								<br />
+								<label>Hizmet ismi 4</label>
+								<input asp-for="Service4Name" type="text" class="form-control" id="exampleInputEmail1" >
+							</div>
+							<div class="form-group">
+								<br />
+								<label>Hizmet Açıklaması 4</label>
+								<input asp-for="Service4Desc" type="text" class="form-control" id="exampleInputEmail1">
+							</div>
+
+
+							<button type="submit" class="btn btn-primary btn-sm waves-effect waves-light">Submit</button>
+						</form>
+					</div>
+					<!-- /.card-content -->
+				</div>
+				<!-- /.box-content -->
+			</div>
+			<!-- /.col-lg-6 col-xs-12 -->
+			<!-- /.col-lg-6 col-xs-12 -->
+		</div>
+		<!-- /.row -->
+		<!-- /.row small-spacing -->
+		
+	</div>
+	<!-- /.main-content -->
+</div>

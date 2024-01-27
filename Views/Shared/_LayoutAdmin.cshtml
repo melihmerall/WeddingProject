@@ -1,0 +1,107 @@
+﻿@using WeddingProject.Helpers.AlertControl
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="~/assets/styles/style.min.css">
+
+    <!-- Material Design Icon -->
+    <link rel="stylesheet" href="~/assets/fonts/material-design/css/materialdesignicons.css">
+
+    <!-- mCustomScrollbar -->
+    <link rel="stylesheet" href="~/assets/plugin/mCustomScrollbar/jquery.mCustomScrollbar.min.css">
+
+    <!-- Waves Effect -->
+    <link rel="stylesheet" href="~/assets/plugin/waves/waves.min.css">
+
+    <!-- Sweet Alert -->
+    <link rel="stylesheet" href="~/assets/plugin/sweet-alert/sweetalert.css">
+
+    <!-- Percent Circle -->
+    <link rel="stylesheet" href="~/assets/plugin/percircle/css/percircle.css">
+
+    <!-- Chartist Chart -->
+    <link rel="stylesheet" href="~/assets/plugin/chart/chartist/chartist.min.css">
+
+    <!-- FullCalendar -->
+    <link rel="stylesheet" href="~/assets/plugin/fullcalendar/fullcalendar.min.css">
+    <link rel="stylesheet" href="~/assets/plugin/fullcalendar/fullcalendar.print.css" media='print'>
+
+    <!-- Color Picker -->
+    <link rel="stylesheet" href="~/assets/color-switcher/color-switcher.min.css">
+</head>
+<body>
+	<div class="main-menu">
+        @if (TempData["message"] != null)
+        {
+            <partial name="_ResultMessages" model="@(TempData.Get<AlertMessage>("message"))" />
+        }
+		<header class="header">
+			<a href="index.html" class="logo">Hexaops</a>
+			<button type="button" class="button-close fa fa-times js__menu_close"></button>
+		</header>
+		<!-- /.header -->
+		<div class="content">
+
+			<div class="navigation">
+				<ul class="menu js__accordion">
+					<li class="current">
+						<a class="waves-effect" href="/Admin/anasayfadüzenle"><i class="menu-icon mdi mdi-view-dashboard"></i><span>Anasayfa Düzeni</span></a>
+					</li>
+				
+					<li>
+                        <a class="waves-effect" href="calendar.html"><i class="menu-icon mdi mdi-calendar-multiple"></i><span>Hakkımızda Sayfası Düzeni</span></a>
+					</li>
+					<li>
+                        <a class="waves-effect" href="calendar.html"><i class="menu-icon mdi mdi-calendar-multiple"></i><span>İletişim Sayfası Düzeni</span></a>
+
+					
+						<!-- /.sub-menu js__content -->
+					</li>
+				</ul>
+				<!-- /.menu js__accordion -->
+			</div>
+			<!-- /.navigation -->
+		</div>
+		<!-- /.content -->
+	</div>
+    @RenderBody()
+
+
+
+
+    <!-- JS -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="~/assets/scripts/jquery.min.js"></script>
+    <script src="~/assets/scripts/modernizr.min.js"></script>
+    <script src="~/assets/plugin/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/assets/plugin/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="~/assets/plugin/nprogress/nprogress.js"></script>
+    <script src="~/assets/plugin/sweet-alert/sweetalert.min.js"></script>
+    <script src="~/assets/plugin/waves/waves.min.js"></script>
+    <!-- Full Screen Plugin -->
+    <script src="~/assets/plugin/fullscreen/jquery.fullscreen-min.js"></script>
+
+    <!-- Google Chart -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <!-- chart.js Chart -->
+    <script src="~/assets/plugin/chart/chartjs/Chart.bundle.min.js"></script>
+    <script src="~/assets/scripts/chart.chartjs.init.min.js"></script>
+
+    <!-- FullCalendar -->
+    <script src="~/assets/plugin/moment/moment.js"></script>
+    <script src="~/assets/plugin/fullcalendar/fullcalendar.min.js"></script>
+    <script src="~/assets/scripts/fullcalendar.init.js"></script>
+
+    <!-- Sparkline Chart -->
+    <script src="~/assets/plugin/chart/sparkline/jquery.sparkline.min.js"></script>
+    <script src="~/assets/scripts/chart.sparkline.init.min.js"></script>
+
+    <script src="~/assets/scripts/main.min.js"></script>
+    <script src="~/assets/color-switcher/color-switcher.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
