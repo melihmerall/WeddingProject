@@ -10,7 +10,7 @@ namespace WeddingProject.Controllers
     {
 		private readonly SqlServerDbContext _context;
 		private readonly IWebHostEnvironment _webHostEnvironment;
-		private readonly ILogger<HomeController> _logger;
+		private readonly ILogger<HomeController>  _logger;
 
         public HomeController(ILogger<HomeController> logger, SqlServerDbContext context, IWebHostEnvironment webHostEnvironment)
         {
