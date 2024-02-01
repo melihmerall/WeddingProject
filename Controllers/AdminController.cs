@@ -63,7 +63,7 @@ namespace WeddingProject.Controllers
 					Service4Name = model.Service4Name,
 					Slider1ImgPath = slideri1 != null ? FileHelper.UploadedFile(_webHostEnvironment, slideri1, "Anasayfa") : null,
 					Slider2ImgPath = slideri2 != null ? FileHelper.UploadedFile(_webHostEnvironment, slideri2, "Anasayfa") : null,
-					Slider3ImgPath = slideri2 != null ? FileHelper.UploadedFile(_webHostEnvironment, slideri3, "Anasayfa") : null,
+					Slider3ImgPath = slideri3 != null ? FileHelper.UploadedFile(_webHostEnvironment, slideri3, "Anasayfa") : null,
 					Slider1Title = model.Slider1Title,
 					Slider2Title = model.Slider2Title,
 					Slider3Title = model.Slider3Title,
@@ -128,21 +128,33 @@ namespace WeddingProject.Controllers
 				entity.Service4Name = model.Service4Name;
 				if (slideri1 != null)
 				{
-					FileHelper.DeleteImageFromFile(_webHostEnvironment, "Anasayfa", entity.Slider1ImgPath);
+					if(entity.Slider1ImgPath != null)
+					{
+						FileHelper.DeleteImageFromFile(_webHostEnvironment, "Anasayfa", entity.Slider1ImgPath);
+
+					}
 
 					entity.Slider1ImgPath =
 						FileHelper.UploadedFile(_webHostEnvironment, slideri1, "Anasayfa");
 				}
 				if (slideri2 != null)
 				{
-					FileHelper.DeleteImageFromFile(_webHostEnvironment, "Anasayfa", entity.Slider2ImgPath);
+					if(entity.Slider2ImgPath != null)
+					{
+					    FileHelper.DeleteImageFromFile(_webHostEnvironment, "Anasayfa", entity.Slider2ImgPath);
+
+					}
 
 					entity.Slider2ImgPath =
 						FileHelper.UploadedFile(_webHostEnvironment, slideri2, "Anasayfa");
 				}
 				if (slideri3 != null)
 				{
-					FileHelper.DeleteImageFromFile(_webHostEnvironment, "Anasayfa", entity.Slider3ImgPath);
+					if(entity.Slider3ImgPath != null)
+					{
+						FileHelper.DeleteImageFromFile(_webHostEnvironment, "Anasayfa", entity.Slider3ImgPath);
+
+					}
 
 					entity.Slider3ImgPath =
 						FileHelper.UploadedFile(_webHostEnvironment, slideri3, "Anasayfa");
