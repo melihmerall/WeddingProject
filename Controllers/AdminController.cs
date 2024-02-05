@@ -84,29 +84,42 @@ namespace WeddingProject.Controllers
 				entity.HomePageDescTitle = model.HomePageDescTitle;
 				if (hp1i != null)
 				{
-					FileHelper.DeleteImageFromFile(_webHostEnvironment, "Anasayfa", entity.HomePage1ImgPath);
+					if (entity.HomePage1ImgPath != null)
+					{
+						FileHelper.DeleteImageFromFile(_webHostEnvironment, "Anasayfa", entity.HomePage1ImgPath);
+
+					}
 
 					entity.HomePage1ImgPath =
 						FileHelper.UploadedFile(_webHostEnvironment, hp1i, "Anasayfa");
 				}
 				if (hp2i != null)
 				{
-					FileHelper.DeleteImageFromFile(_webHostEnvironment, "Anasayfa", entity.HomePage2ImgPath);
+					if (entity.HomePage2ImgPath != null)
+					{
+						FileHelper.DeleteImageFromFile(_webHostEnvironment, "Anasayfa", entity.HomePage2ImgPath);
 
+					}
 					entity.HomePage2ImgPath =
 						FileHelper.UploadedFile(_webHostEnvironment, hp2i, "Anasayfa");
 				}
 				if (hp3i != null)
 				{
-					FileHelper.DeleteImageFromFile(_webHostEnvironment, "Anasayfa", entity.HomePage3ImgPath);
+					if (entity.HomePage3ImgPath != null)
+					{
+						FileHelper.DeleteImageFromFile(_webHostEnvironment, "Anasayfa", entity.HomePage3ImgPath);
 
+					}
 					entity.HomePage3ImgPath =
 						FileHelper.UploadedFile(_webHostEnvironment, hp3i, "Anasayfa");
 				}
 				if (hp4i != null)
 				{
-					FileHelper.DeleteImageFromFile(_webHostEnvironment, "Anasayfa", entity.HomePage4ImgPath);
+					if (entity.HomePage4ImgPath != null)
+					{
+						FileHelper.DeleteImageFromFile(_webHostEnvironment, "Anasayfa", entity.HomePage4ImgPath);
 
+					}
 					entity.HomePage4ImgPath =
 						FileHelper.UploadedFile(_webHostEnvironment, hp4i, "Anasayfa");
 				}
