@@ -16,6 +16,26 @@
     <link rel='stylesheet' id='tilia-style-css' href='~/style.css' type='text/css' media='all' />
     <!-- favicons -->
     <link rel="icon" width="100" height="100" href="https://img.icons8.com/papercut/60/newlyweds.png" />
+
+    <script type="text/javascript">
+        (function () {
+            var options = {
+                whatsapp: "+905446514924",
+                call_to_action: "Merhaba. Salon kiralamak istiyorum. Daha fazla bilgi alabilirmiyim?",
+                position: "left",
+            };
+            var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
+            var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+            s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+            var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+        })();
+        setTimeout(() => {
+            var x = document.getElementsByClassName("hasyTc");
+            x[0].remove();
+        }, 2000)
+    </script>
+
+
 </head>
 <body>
     <div class="menu-mask">
@@ -33,11 +53,11 @@
                     </button>
                 </div>
             </div>
-            <div class="row">
+            <div class="row" >
                 <div class="col-lg-7">
                     <!-- MOBILE MENU -->
-                    <ul class="menu-mobile">
-                        <li class="">
+                    <ul class="menu-mobile" >
+                        <li class="" >
                             <a href="/anasayfa">Anasayfa</a>
                         </li>
                         <li class="">
@@ -121,7 +141,7 @@
             </div>
             <!-- /top-header -->
             <div class="header-container5">
-                <nav class="nav-holder nav-holder-5">
+                <nav class="nav-holder nav-holder-5" >
                     <ul class="menu-nav">
                         <li class="menu-item">
                             <a href="/">Anasayfa</a>
@@ -136,9 +156,13 @@
                 </nav>
             </div>
         </div>
+
+
     </header>
 
+ 
     @RenderBody()
+
 
     <footer>
         <div class="container">
@@ -187,16 +211,41 @@
                             <div class="widget widget-footer">
                                 <h5 class="widgettitle">Sosyal Medya</h5>
                                 <ul>
-                                    <li><a href="https://www.facebook.com/groups/602191946610335" target="_blank">Facebook</a></li>
-                                    <li><a href="https://www.instagram.com/green.garden46/" target="_blank">Instagram</a></li>
+                                   
+                                    <div style="display:flex">
+
+                                   <a b-lh4kcmxa03="" class="social-facebook" href="https://www.facebook.com/groups/602191946610335" target="_blank"><i b-lh4kcmxa03="" class="fab fa-facebook-f"></i></a>
+                                    <li><a href="https://www.facebook.com/groups/602191946610335" style="margin-left:5px" target="_blank">Facebook</a></li>
+
+                                    </div>
+
+
+                                    
+
+                                    <div style="display:flex">
+                                        <a b-lh4kcmxa03="" class="social-instagram"  href="https://www.instagram.com/green.garden46/" target="_blank"><i b-lh4kcmxa03="" class="fab fa-instagram"></i></a>
+
+                                    <li><a href="https://www.instagram.com/green.garden46/" style="margin-left:5px" target="_blank">Instagram</a></li>
+                                       
+                                    </div>
+
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="copyright">
-                <div class="footer-copy"> <span class="footer-year">2024</span> &copy; HEXAOPS. Tüm Hakları Saklıdır.</div>
+
+            <div class="copyright" style="text-align:center; ">
+                <p style="display:inline-block; margin-right:14px; font-weight:bold">©2020-2024 | Bu sitenin tüm hakları</p>
+
+                    <a href="https://hexaops.net/" target="_blank">
+                    <img src="~/images/HEXAOPS LLC-LOGO-YATAY.jpg" width="100px" />
+                </a>
+
+                    <p style="display:inline-block; margin-left:14px; font-weight:bold"> tarafından saklıdır.</p>
+                  
+               
             </div>
         </div>
     </footer>
